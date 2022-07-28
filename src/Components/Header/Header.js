@@ -6,9 +6,17 @@ import cart from '../../Media/icon-cart.svg'
 
 import './Header.css'
 import { ModalContext } from '../../Context/ModalContext'
+import { CartContext } from '../../Context/CartContext'
 
 const Header = () => {
     const {isModalOpen, setIsModalOpen} = useContext(ModalContext)
+
+    const {finalQuantity} = useContext(CartContext)
+    const [quantity] = finalQuantity;
+
+    const {isOpen} = useContext(CartContext)
+    const [isCartOpen, setIsCartOpen] = isOpen;
+
   return (
     <header>
         <div className='header-row'>
@@ -42,8 +50,8 @@ const Header = () => {
             <div className='header-col-3'>
                 <div className='cp'>
                     <div className='cart-header'>
-                        <span className='notification'>0</span>
-                        <img src={cart} alt='cart' id='cart'/>
+                        <span className={`notification ${quantity > 0 ? '' : 'hidden'}`}>{quantity}</span>
+                        <img src={cart} alt='cart' id='cart' onClick = {() => {isCartOpen ? setIsCartOpen(false) : setIsCartOpen(true)}}/>
                     </div>
                     <img src={avatar} alt='avatar' id='avatar'/>
                 </div>

@@ -61,6 +61,10 @@
     top: -10px;
 }
 
+.notification.hidden{
+    display: none;
+}
+
 #avatar{
     border: 2px solid transparent;
     border-radius: 50%;

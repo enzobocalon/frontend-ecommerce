@@ -6,6 +6,12 @@
     top: 8%;
     right: 2rem;
     z-index: 10;
+    transition: all .3s ease-in-out
+}
+
+.cart.hidden{
+    transform: translateX(200%);
+    visibility: hidden;
 }
 
 .cart-items{
@@ -43,6 +49,7 @@
 
 #total{
     font-weight: 700;
+    margin-left: 20px;
 }
 
 .checkout{
