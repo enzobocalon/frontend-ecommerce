@@ -5,8 +5,15 @@ import CartProvider from './Context/CartContext';
 import Commerce from './Components/Commerce/Commerce';
 import FlexGallery from './Components/FlexGallery/FlexGallery';
 import ModalProvider from './Context/ModalContext'
+import { useEffect } from 'react';
+
+
 
 function App() {
+
+  useEffect(() => {
+    window.alert('This page is currently in WIP.')
+  })
   return (
     <CartProvider>
       <ModalProvider>

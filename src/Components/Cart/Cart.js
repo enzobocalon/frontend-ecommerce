@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import './Cart.css'
 
 //images
@@ -6,14 +6,23 @@ import thumb1 from '../../Media/image-product-1-thumbnail.jpg'
 
 //icons
 import deleteIcon from '../../Media/icon-delete.svg'
+import { CartContext } from '../../Context/CartContext'
 
 const Cart = () => {
+    
+    const {finalQuantity} = useContext(CartContext)
+
+    const [quantity, setQuantity] = finalQuantity;
+
   return (
     <div className='cart'>
         <div className='cart-title'>
             <span>Cart</span>
         </div>
-        {/* if theres any item */}
+
+        
+
+
         {/* <div className='cart-items'>
             <img src={thumb1} alt='item' id='cart-img'/>
 

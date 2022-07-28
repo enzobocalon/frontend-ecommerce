@@ -31,15 +31,14 @@ const Commerce = () => {
     const [currentImage, setCurrentImage] = useState(1)
     const {isModalOpen, setIsModalOpen} = useContext(ModalContext)
     const {cartQuantity} = useContext(CartContext)
+    const {finalQuantity} = useContext(CartContext)
     
     const [quantity, setQuantity] = cartQuantity
+    const [sendToCart, setSendToCart] = finalQuantity
 
     const renderModal = () => {
         if (!isModalOpen){
-            setIsModalOpen(prev => !prev)
-            
-                
-                
+            setIsModalOpen(prev => !prev)        
         } else{
             setIsModalOpen(prev => !prev)
         }
@@ -91,7 +90,7 @@ const Commerce = () => {
                             </button>
                         </div>
                     </div>
-                <button id='add-to-cart'>
+                <button id='add-to-cart' onClick={() => {setSendToCart(quantity)}}>
                     <img src={cart} alt='plus'id='cart-add'/>
                     Add to Cart
                 </button>
