@@ -19,6 +19,8 @@ import thumb4 from '../../Media/image-product-4-thumbnail.jpg'
 import cart from '../../Media/icon-cart.svg'
 import minus from '../../Media/icon-minus.svg'
 import plus from '../../Media/icon-plus.svg'
+import next from '../../Media/icon-next.svg'
+import previous from '../../Media/icon-previous.svg'
 
 // Components and Context imports
 
@@ -48,10 +50,14 @@ const Commerce = () => {
     <main>
         <div className='gallery'>
             <div className='current-image'>
+                <img src={previous} alt='previous' id='previous-mobile' className='mobile-btn' onClick={() => {setCurrentImage(prev => prev-1)}}/>
+
                 <img src={currentImage === 1 ? image1 : 
                 currentImage === 2 ? image2 :
                 currentImage === 3 ? image3 :
                 currentImage === 4 ? image4 : setCurrentImage(1)} alt='product image'id='current-image' onClick={renderModal}/>
+
+                <img src={next} alt='next' id='next-mobile' className='mobile-btn' onClick={() => {setCurrentImage(prev => prev+1)}}/>
             </div>
             <div className='all-images'>
                 <img src={thumb1} alt='product image' className={`thumb-image ${currentImage === 1 ? 'active' : ''}`} onClick={() => {setCurrentImage(1)}}/>

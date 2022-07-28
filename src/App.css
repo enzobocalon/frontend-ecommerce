@@ -1,6 +1,9 @@
-body{
-  height: 95vh;
+footer{
   width: 100%;
-  overflow: hidden;
-  position: fixed;
+  text-align: center;
+}
+
+footer a{
+  text-decoration: none;
+  color: hsl(26, 100%, 55%);
 }

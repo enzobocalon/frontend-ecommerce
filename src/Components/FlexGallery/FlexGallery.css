@@ -52,11 +52,11 @@
 
 #previous-modal{
     left: -25px;
-
 }
 
 #next-modal{
     right: -25px;
+    padding: .9rem 1.2rem;
 }
 
 #product-modal{
@@ -73,9 +73,9 @@
     cursor: pointer;
 }
 
-.shadow{
+.shadow.desktop, .shadow.mobile{
     background-color: #000;
-    height: 100%;
+    height: 100vh;
     left: 0;
     margin: 0;
     opacity: .75;
@@ -90,11 +90,29 @@
     display: none;
 }
 
-.close-modal{
-    filter:  brightness(0) invert(1);
+.close-modal>path:hover{
+    fill: hsl(26, 100%, 55%);
 }
 
 .thumb-image-modal.active{
     opacity: .6;
     border: 3px solid hsl(26, 100%, 55%);
+}
+
+#next-modal:hover path, #previous-modal:hover path{
+    stroke: hsl(26, 100%, 55%);
+}
+
+.close-modal>path, #next-modal path, #previous-modal path{
+    transition: all .3s ease;
+}
+
+@media only screen and (max-width: 900px){
+    .modal-col{
+        display: none;
+    }
+
+    .shadow.desktop{
+        display: none;
+    }
 }

@@ -6,11 +6,12 @@
     top: 8%;
     right: 2rem;
     z-index: 10;
-    transition: all .3s ease-in-out
+    transition: all .3s ease-in-out;
+    border-radius: 10px;
 }
 
 .cart.hidden{
-    transform: translateX(200%);
+    right: -100%;
     visibility: hidden;
 }
 
@@ -27,6 +28,7 @@
     width: 100%;
     font-weight: 700;
     padding: 1rem 2rem;
+    border-radius: 10px 10px 0 0;
 }
 
 #cart-img{
@@ -54,6 +56,7 @@
 
 .checkout{
     padding: 1rem 2rem;
+    border-radius: 0 0 10px 10px;
 }
 
 #checkout-btn{
@@ -66,7 +69,12 @@
     color: white;
     font-family: 'Kumbh Sans', sans-serif;
     font-weight: 700;
-    cursor: pointer
+    cursor: pointer;
+    transition: opacity .3s ease;
+}
+
+#checkout-btn:hover{
+    opacity: .7;
 }
 
 .no-items{
@@ -79,4 +87,118 @@
 .no-items span{
     color: hsl(219, 9%, 45%);
     font-weight: 700;
+}
+
+.checkout, .cart-items, .no-items, .cart{
+    background-color: white;
+}
+
+
+@media only screen and (min-width: 2560px) {
+    .cart{
+        width: 550px;
+        height: 330px;
+    }
+    
+    .cart-title{
+        font-size: 1.5rem;
+        padding: .5rem 2rem;
+    }
+
+    #cart-img{
+        width: 30%;
+    }
+
+    #items-info-title{
+        font-size: 1.5rem;
+        width: 100%;
+    }
+    #delete{
+        transform: scale(2)
+    }
+
+    #items-info-price, #quantity, #total{
+        font-size: 1.5rem;
+    }
+
+    #checkout-btn{
+        font-size: 1.5rem
+    }
+}
+
+@media only screen and (max-width: 1500px){
+    .cart{
+        height: 200px;
+    }
+
+    .cart-items{
+        padding-bottom: .5rem;
+    }
+
+@media only screen and (max-width: 900px){
+    .cart{
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        width: 400px;
+        height: 220px;
+        position: absolute;
+        top: 8%;
+        right: 2rem;
+        z-index: 10;
+        opacity: 1;
+        transition: all .3s ease;
+    }
+    
+    .cart.hidden{
+        right: 2rem;
+        opacity: 0;
+    }
+}
+
+@media only screen and (max-width: 425px){
+    .cart{
+        top: 20%;
+        right: 2.5%;
+    }
+
+    .cart.hidden{
+        right: 2.5%;
+    }
+}
+
+@media only screen and (max-width: 380px){
+    .cart{
+        top: 20%;
+        right: 3%;
+        width: 350px;
+    }
+
+    .cart.hidden{
+        right: 3%;
+    }
+}
+
+@media only screen and (max-width: 350px){
+    .cart{
+        top: 20%;
+        right: 1%;
+        width: 330px;
+    }
+
+    .cart.hidden{
+        right: 1%;
+    }
+}
+
+@media only screen and (max-width: 320px){
+    .cart{
+        top: 15%;
+        right: 2%;
+        width: 310px;
+    }
+
+    .cart.hidden{
+        right: 2%;
+    }
+}
+
 }

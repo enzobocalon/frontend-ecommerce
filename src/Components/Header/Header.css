@@ -6,6 +6,10 @@
     height: 5rem;
 }
 
+.close-mobile-menu{
+    display: none;
+}
+
 .header-col-1{
     width: 5%;
 }
@@ -94,4 +98,103 @@
     display: flex;
     width: 100%;
     justify-content: center;
+}
+
+.hamburguer{
+    display: none;
+}
+
+@media only screen and (max-width: 950px){
+    .li-menu{
+        margin: 0 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 900px){
+
+    body{
+        position:unset;
+        max-width: 100vw;
+    }
+
+    .close-mobile-menu{
+        display: block;
+    }
+
+    .hamburguer{
+        display: block;
+        position: absolute;
+        left: 1.5rem;
+        top: 2rem;
+    }
+
+    .header-row{
+        justify-content: space-evenly;
+    }
+
+    .ul-menu.hidden{
+        left: -200%;
+    }
+
+    #logo{
+        margin-left: 1rem;
+    }
+
+    .ul-menu{
+        background-color: white;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: flex-start;
+        padding-top: 2rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all .3s ease;
+        width: 400px;
+        z-index: 20;
+    }
+
+    .li-menu{
+        margin-bottom: 1.5rem;
+    }
+
+    .li-menu:nth-child(2){
+        margin-top: 1.5rem;
+    }
+
+    .menu-item{
+        color: black;
+        font-weight: 700;
+        padding-bottom: 0;
+        font-size: 1.2rem;
+    }
+
+    .menu-item:hover{
+        border-bottom: none;
+        color: hsl(26, 100%, 55%);
+    }
+
+    .close-mobile-menu{
+        font-weight: 700;
+        color: hsl(220, 14%, 75%);
+    }
+
+@media only screen and (max-width: 425px){
+    #logo{
+        margin-left: 2rem;
+    }
+}
+
+@media only screen and (max-width: 375px){
+    .ul-menu{
+        width: 80%;
+    }   
+}
+
+@media only screen and (max-width: 320px){
+    .cart-header{
+        margin-right: 10px;
+    }
+}
+
 }
