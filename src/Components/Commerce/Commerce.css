@@ -1,0 +1,144 @@
+main{
+    display: flex;
+    margin: 5rem 10rem;
+}
+
+#current-image{
+    width: 100%;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.gallery{
+    width: 35%;
+    margin-right: 5rem;
+}
+
+.all-images{
+    display: flex;
+    margin-top: 2rem;
+    justify-content: space-between;
+}
+
+.thumb-image{
+    width: 20%;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.thumb-image.active{
+    opacity: .6;
+    border: 3px solid hsl(26, 100%, 55%);
+}
+
+.product-info{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin-left: 4rem;
+    margin-top: 1rem;
+}
+
+#sneaker-company{
+    color: hsl(26, 100%, 55%);
+    font-weight: 700;
+    padding: 2rem 0;
+}
+
+.product-info h1{
+    font-size: 3rem;
+    padding: 2rem 0;
+}
+
+.product-info p{
+    color: hsl(219, 9%, 45%);
+    line-height: 2rem;
+}
+
+.price-discount{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+}
+
+.price-discount h3{
+    font-size: 2rem;
+}
+
+#discount{
+    color: hsl(26, 100%, 55%);
+    font-weight: 700;
+    background-color: hsl(25, 100%, 94%);
+    padding: 5px;
+    width: 3rem;
+    border-radius: 10px;
+}
+
+#last-price{
+    color: hsl(220, 14%, 75%);
+    font-weight: 700;
+    text-decoration: line-through;
+}
+
+.qc{
+    display: flex;
+    margin-top: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    height: 4rem;
+    gap: 2rem;
+    width: 75%;
+}
+
+
+
+.quantity{
+    background-color: hsl(223, 64%, 98%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+    height: 75%;
+    border-radius: 10px;
+}
+
+.quantity button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.quantity span{
+    font-weight: 700;
+}
+
+#minus{
+    margin-left: 1rem;
+    margin-bottom: 3px;
+}
+
+#plus{
+    margin-right: 1rem;
+}
+
+#add-to-cart{
+    width: 60%;
+    height: 75%;
+    color: white;
+    background-color: hsl(26, 100%, 55%);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#cart-add{
+    filter:  brightness(0) invert(1);
+}

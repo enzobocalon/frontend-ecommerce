@@ -1,24 +1,19 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Header from './Components/Header/Header';
+import CartProvider from './Context/CartContext';
+import Commerce from './Components/Commerce/Commerce';
+import FlexGallery from './Components/FlexGallery/FlexGallery';
+import ModalProvider from './Context/ModalContext'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CartProvider>
+      <ModalProvider>
+        <Header />
+        <Commerce />
+      </ModalProvider>
+    </CartProvider>
   );
 }
 
