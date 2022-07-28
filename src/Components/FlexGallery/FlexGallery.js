@@ -16,9 +16,6 @@ import thumb4 from '../../Media/image-product-4-thumbnail.jpg'
 
 //icons
 
-import close from '../../Media/icon-close.svg'
-import next from '../../Media/icon-next.svg'
-import previous from '../../Media/icon-previous.svg'
 import { ModalContext } from '../../Context/ModalContext'
 
 const FlexGallery = ({selectedImage, setSelectedImage}) => {
