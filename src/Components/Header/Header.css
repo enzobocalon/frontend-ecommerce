@@ -35,6 +35,7 @@
     color: hsl(220, 14%, 75%);
     padding-bottom: 1.55rem;
     cursor: pointer;
+    transition: all .1s ease;
 }
 
 .menu-item:hover{
